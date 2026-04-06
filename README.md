@@ -1,11 +1,11 @@
-# P2 — Multi-Doc Research Assistant
+# Multi-Doc Research Assistant
 
-> LlamaIndex · FAISS · Streamlit · OpenAI
+> LlamaIndex · FAISS · Groq · Streamlit
 
 Extends RAG to **multiple sources simultaneously** with source-level citation, retrieval scoring, and document management. Built to demonstrate production-grade RAG orchestration thinking.
 
-## What this adds over P1
-| Capability | P1 (PDF Q&A) | P2 (Research Assistant) |
+## What this adds over PDF Q&A Chatbot
+| Capability | PDF Q&A Chatbot | Multi-Doc Research Assistant |
 |---|---|---|
 | Sources | Single PDF | Multiple PDFs + URLs |
 | Vector store | ChromaDB | FAISS (local, fast) |
@@ -16,7 +16,7 @@ Extends RAG to **multiple sources simultaneously** with source-level citation, r
 
 ## Project Structure
 ```
-p2-research-assistant/
+multi-doc-research-assistant/
 ├── app/
 │   ├── main.py              # Streamlit entry point
 │   ├── config.py            # Settings & constants
@@ -36,7 +36,6 @@ p2-research-assistant/
 │       ├── components.py    # Reusable Streamlit components
 │       └── styles.py        # Custom CSS
 ├── storage/                 # FAISS indexes (gitignored)
-├── sample_docs/             # Test PDFs for demo
 ├── tests/
 │   ├── test_ingestion.py
 │   ├── test_retrieval.py
@@ -50,22 +49,22 @@ p2-research-assistant/
 
 ```bash
 # 1. Clone and enter
-git clone <your-repo>
-cd p2-research-assistant
+git clone https://github.com/Vedant-1404/multi-doc-research-assistant.git
+cd multi-doc-research-assistant
 
 # 2. Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+python3 -m venv venv
+source venv/bin/activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
 
 # 4. Configure environment
 cp .env.example .env
-# Add your OPENAI_API_KEY to .env
+# Add your GROQ_API_KEY to .env
 
 # 5. Run
-streamlit run app/main.py
+PYTHONPATH=. streamlit run app/main.py
 ```
 
 ## Key Design Decisions
