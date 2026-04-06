@@ -1,0 +1,37 @@
+# Core — all pinned to 0.10.x ecosystem
+llama-index-core==0.10.68
+llama-index-vector-stores-faiss==0.1.2
+llama-index-llms-groq==0.1.4
+llama-index-embeddings-huggingface==0.1.5
+llama-index-readers-file==0.1.22
+llama-index-postprocessor-cohere-rerank==0.1.7
+
+# Vector store
+faiss-cpu==1.8.0
+
+# Document processing
+pypdf==4.2.0
+beautifulsoup4==4.12.3
+requests==2.31.0
+html2text>=2020.1.16,<2021.0.0
+
+# UI
+streamlit==1.35.0
+
+# Groq client
+groq==0.9.0
+
+# Embeddings
+sentence-transformers==2.7.0
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.7.2
+pydantic-settings==2.3.1
+loguru==0.7.2
+tenacity==8.3.0
+numpy==1.26.4
+
+# Testing
+pytest==8.2.2
+pytest-asyncio==0.23.7
